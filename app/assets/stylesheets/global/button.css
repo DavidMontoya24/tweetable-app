@@ -1,0 +1,60 @@
+.button {
+  border: none;
+  border-radius: 6.25rem;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 150ms; */
+}
+
+.button:active {
+  transform: translateY(0.25rem);
+}
+
+/* Button Primary */
+.button--primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: var(--primary-hover);
+}
+
+
+/* Button Ghost */
+.button--ghost {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+
+/* Button Help */
+.button--help {
+  background-color: white;
+  border: 1px solid var(--primary-text);
+  color: var(--primary-text);
+}
+
+
+/* Button sizes */
+.button--l {
+  padding: 1rem;
+}
+
+.button--default {
+  padding: 0.5rem 1rem;
+}
+
+/* With icon */
+.button--s {
+  padding: 0.25rem 1rem;
+}

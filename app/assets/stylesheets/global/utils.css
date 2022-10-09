@@ -1,0 +1,141 @@
+/* Background colors */
+
+.bg-white {
+  background-color: white;
+}
+
+/* colors */
+.white {
+  color: #fff;
+}
+
+/* Margins */
+.m-0-5 {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-0-5 {
+  margin-bottom: 0.5rem;
+}
+
+
+.mb-0-25 {
+  margin-bottom: 0.25rem;
+}
+
+.mt-0-5 {
+  margin-top: 0.5rem;
+}
+
+/* Flex & Grid */
+.flex {
+  display: flex;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap-0-25 {
+  gap: 0.25rem;
+}
+.gap-0-5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Width */
+.fit-content {
+  width: fit-content;
+}
+
+.max-width {
+  width: 100%;
+}
+
+/* Text styling */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Paddings */
+.p-0 {
+  padding: 0;
+}
+
+.p-0-5{
+  padding: .5rem;
+}
+
+.p-1{
+  padding: 1rem;
+}
+
+.p-tb-0-5{
+  padding: .5rem 0;
+}
+
+/* Colors */
+.primary-color {
+  color: var(--primary);
+}
+
+.primary-text {
+  color: var(--primary-text);
+}
+
+.secondary-text {
+  color: var(--secondary-text);
+}
+
+/* borders */
+.no-border {
+  border: none;
+}
+
+/* height */
+.h-160{
+  height: 10rem;
+}
+
+.no-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

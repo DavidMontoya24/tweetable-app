@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TweetableIndividual</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="section text-center">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
+    </div>
+
+    <header class="section">
+      <div class="header__nav space-between gap-0-5">
+        <div><%=link_to "Home", root_path, class: "button button--primary button--s"%></div>
+        <div>
+          <% if user_signed_in? %>
+            <%=link_to "Edit Profile", edit_user_registration_path, class: "button button--ghost button--s"%>
+            <%# <%=link_to "Edit Profile", edit_user_registration_path, data: { turbo_method: :edit }, class: "button button--ghost button--s"%> 
+            <%=link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: "button button--ghost button--s"%>
+          <% else %>
+            <%=link_to "Login", new_user_session_path, class: "button button--ghost button--s"%>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>

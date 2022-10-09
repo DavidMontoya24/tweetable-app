@@ -1,0 +1,22 @@
+<div data-turbo="false" class="section">
+  <div class="tweet__box text-center p-1">
+    <h2>Edit Tweet</h2>
+  </div>
+
+  <div class="container ">
+    <%= form_with(model: @tweet) do |f| %>
+      <div class="flex flex-column gap-0-5 ">
+        <div class="field">
+          <%= f.label :body %><br />
+          <%= f.text_area :body, class:"input max-width h-160" %>
+        </div>
+
+        <div class="text-center">
+          <%= f.submit "Edit", class:"button button--primary button--default " %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>

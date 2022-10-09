@@ -1,0 +1,28 @@
+<%= form_with(model: comment, class:"tweet__box flex gap-0-5") do |form| %>
+  <div class="avatar-container">
+    <% if user_signed_in? %>
+      <% if current_user.avatar.present? %>
+        <%= image_tag(current_user.avatar, alt:"user-avatar", class:"avatar__tweet") %>
+      <% else %>
+        <% current_user.avatar.attach(io: File.open("app/assets/images/avatar-default.png"),
+                                  filename: "avatar-default")  %>
+        <%= image_tag(current_user.avatar, alt:"user-avatar", class:"avatar__tweet") %>
+      <% end %>
+
+    <% else %>
+    <% end %>
+  </div>
+
+  <div class="max-width">
+    <div>
+    <%= form.text_area :body, placeholder: "Remember to thing before write...", class:"no-border max-width p-0-5" %>
+    </div>
+
+    <%= form.hidden_field :tweet_id, value: @tweet.id %>
+
+    <div class="flex flex-end">
+      <%= form.submit "Comment" , class: "button button--primary button--default"%>
+    </div>
+  </div>
+
+<% end %>

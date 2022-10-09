@@ -1,0 +1,42 @@
+<section class="section">
+
+  <div class="tweet__box text-center">
+    <h1 class="text-l bold m-1">Tweet Detail</h1>
+  </div>
+
+  <div class="tweet__box mb-1 flex gap-0-5">
+    <div class="avatar-container">
+      <%= image_tag(@tweet.user.avatar, alt:"user-avatar", class:"avatar__tweet") %>
+    </div>
+    <div class="max-width">
+      <div class="flex gap-0-5">
+        <p class="bold"><%= @tweet.user.name %></p>
+        <p class="secondary-text">@<%= @tweet.user.username %></p>
+        <p class="secondary-text"><%= time_ago_in_words(@tweet.created_at)%></p>
+      </div>
+      <p><%= @tweet.body %></p>
+      <div class="flex gap-0-5 align-center">
+        <%= image_tag("comments-icon.png") %>
+        <p><%= @tweet.comments_count %></p>
+      </div>
+    </div>
+  </div>
+
+  <% if user_signed_in? %>
+    <div >
+      <%= render 'comments/comment-form', comment: @comment %>
+    </div>
+  <% end %>
+
+  <div>
+    <% if @tweet.comments.empty? && user_signed_in? %>
+      <div class="text-center primary-color mt-0-5">
+        <p>Hey! Nobody commented this tweet. Feel free to add one!</p>
+      </div>
+    <% end %>
+    <% @tweet.comments.order("created_at desc").each do |comment|%>
+      <%= render "comments/comment", comment: comment %>
+    <% end %>
+  </div>
+  
+</section>

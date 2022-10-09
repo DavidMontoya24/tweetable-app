@@ -1,0 +1,17 @@
+.tweet__box{
+  border: 1px solid var(--background);
+  background-color: white;
+  padding: .5rem 1rem;
+}
+.avatar__tweet{
+  border-radius: 50%;
+}
+.avatar-container{
+  height: 50px;
+  width: 50px;
+}
+.header__nav {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: end;
+}

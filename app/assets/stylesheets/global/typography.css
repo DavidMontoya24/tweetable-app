@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --font-primary: "Roboto"
+}
+
+.text-xl {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+}
+.text-l {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.text-regular {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-sm {
+  font-size: .875rem;
+  line-height: 1.5rem;
+}
+.text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+.regular {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}

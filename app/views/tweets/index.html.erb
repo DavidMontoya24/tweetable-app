@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="tweet__box text-center">
+    <h1 class="text-l bold m-1">Home</h1>
+  </div>
+
+  <% if user_signed_in? %>
+    <div >
+      <%= render 'tweets/tweet-form', tweet: @tweet %>
+    </div>
+  <% end %>
+
+  <div>
+    <% @tweets.each do |tweet|  %>
+      <%= render 'tweets/tweet', tweet: tweet %>
+    <% end %>
+  </div>
+
+</section>
+

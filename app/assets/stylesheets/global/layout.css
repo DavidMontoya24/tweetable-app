@@ -1,0 +1,9 @@
+.section{
+  width: 600px;
+  margin: auto;
+}
+.container{
+  border: 1px solid var(--background);
+  background-color: white;
+  padding: 2.5rem 10rem;
+}

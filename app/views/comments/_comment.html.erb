@@ -1,0 +1,19 @@
+<div class="tweet__box flex gap-0-5">
+  <div class="avatar-container">
+    <%= image_tag(comment.user.avatar, alt:"user-avatar", class:"avatar__tweet") %>
+  </div>
+  <div class="flex flex-column gap-0-25 max-width">
+    <div class="flex gap-0-5">
+      <p class="bold"><%= comment.user.name %></p>
+      <p class="secondary-text">@<%= comment.user.username %></p>
+      <p class="secondary-text"><%= time_ago_in_words(comment.created_at)%></p>
+    </div>
+    <p><%= comment.body %></p>
+    <div class="flex gap-0-5 flex-end">
+      <% if comment.user == current_user %>
+        <%= link_to image_tag("edit-icon.png"), edit_comment_path(comment) %>
+        <%= link_to image_tag("destroy-icon.png"), comment_path(comment), data: { turbo_method: :delete } %>
+      <% end %>
+    </div>
+  </div>
+</div>
